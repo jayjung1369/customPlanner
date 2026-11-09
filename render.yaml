@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: wedding-cn
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: main
+    dockerfilePath: ./china/Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    autoDeployTrigger: commit
